@@ -1,0 +1,16 @@
+"$schema" = "https://open-api.netlify.com/netlify.schema.json"
+
+# Owner-review concept. Do not remove this guard without permission to publish.
+[build]
+  publish = "public"
+  command = "echo 'Unpublished owner-review concept. Publishing is intentionally blocked.' && exit 1"
+  ignore = "exit 0"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+[dev]
+  publish = "public"
+  port = 4187
